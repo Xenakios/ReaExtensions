@@ -3206,6 +3206,7 @@ public:
 	}
 	~PCMSourcePlayerManager()
 	{
+		stopPreview(-1);
 		KillTimer(NULL, m_timer_id);
 	}
 	int startPreview(PCM_source* src, double gain, bool loop)
